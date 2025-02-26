@@ -1,6 +1,7 @@
 ---                               
  import './src/styles/global.css'  
  import Header from '../components/Header.astro';
+import { ClientRouter } from 'astro:transitions';
 
  interface LayoutProps {
 	title: string;
@@ -22,6 +23,7 @@ const { title, description = "A community of music producers and enthusiasts",
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<meta property="og:image" content={image} />
+		<ClientRouter />
 		<title>{title}</title>
 	</head>
 	<body class="min-h-screen">
